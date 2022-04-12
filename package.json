@@ -18,7 +18,7 @@
     "lodash": "^4.17.15",
     "regenerator-runtime": "^0.13.5",
     "rewire": "^5.0.0",
-    "simple-git": "^2.5.0"
+    "simple-git": "^3.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
