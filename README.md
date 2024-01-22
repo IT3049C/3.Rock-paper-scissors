@@ -1,20 +1,32 @@
-Rock Paper Scissors - Group Assignment
+Rock Paper Scissors
 ===================================
-[![GitHub Classroom Workflow](https://s///github.com/IT3049C/3.Rock-paper-scissors/actions/workflows/classroom.yml/badge.svg)](https://s///github.com/IT3049C/3.Rock-paper-scissors/actions/workflows/classroom.yml)
 
-Instructions to this assignment can be found [here](https://it3049c.github.io/Material/Assignments/3.Rock_Paper_Scissors/).
+Instructions to this assignment can be found [here](https://it3049c.github.io/Assignments/3.Rock_Paper_Scissors/).
 
 ## Checklist:
-- [x] update the assignment checks above to the correct link. - Done Automatically
-- [ ] All tests are passing
+- [ ] All Unit tests passed.
+- [ ] frequent commits to github.
 - [ ] filled out the self-evaluation.
-- [ ] filled out the self-reflection.
 
-## Self-Evaluation: 
-how many points out of 20 does your team deserve on this assignment. Revise the assignment grading guideline and assignment rubrics for guidance.
+## Self Grading Guide
+<!--- Update the following line with your self-grade --->
+<!--- Check the Rubric on Canvas for a guideline --->
 
-## Team Reflection:
-- Where did you encounter struggles today, and what did you do to deal with it?
+I should get **( )** out of 20 on this assignment.
 
+## Self-Reflection:
+- **How long it took me to finish this?**
+<!-- Answer below this line -->
+-
 
-### How long it took us to finish this?
+- **What do you think of this completion time?**
+<!-- Answer below this line -->
+- 
+
+- **In hindsight, what would you do differently?**
+- <!-- Answer below this line -->
+- 
+
+- **What resources did you use?**
+- <!-- Answer below this line -->
+- 

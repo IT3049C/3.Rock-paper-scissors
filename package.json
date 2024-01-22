@@ -5,8 +5,7 @@
   "scripts": {
     "start": "open index.html",
     "test": "jest",
-    "test:watch": "jest --watchAll",
-    "postinstall": "node .scripts/badge.js"
+    "test:watch": "jest --watchAll"
   },
   "author": "Yahya Gilany <gilanyym@ucmail.uc.edu>",
   "license": "UNLICENSED",
