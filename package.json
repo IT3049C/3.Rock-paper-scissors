@@ -3,29 +3,32 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "open index.html",
-    "test": "jest",
-    "test:watch": "jest --watchAll"
+    "start": "http-server -c-1",
+    "test": "jest ./jest-tests",
+    "test:watch": "npm run test -- --watchAll"
   },
   "author": "Yahya Gilany <gilanyym@ucmail.uc.edu>",
   "license": "UNLICENSED",
   "dependencies": {
     "@types/jest": "^25.2.3",
     "directory-tree": "^2.2.4",
+    "http-server": "^14.1.1",
     "jest": "^26.0.1",
     "lodash": "^4.17.15",
     "regenerator-runtime": "^0.13.5",
-    "rewire": "^5.0.0",
-    "simple-git": "^3.7.1"
+    "rewire": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.5",
+    "@playwright/test": "^1.41.0",
     "@testing-library/dom": "^7.31.0",
     "@testing-library/jest-dom": "^5.8.0",
+    "@types/node": "^20.11.5",
     "babel-jest": "^26.0.1",
     "babel-plugin-rewire": "^1.2.0",
     "eslint": "^7.0.0",
+    "expect-playwright": "^0.8.0",
     "prettier": "^2.3.0"
   }
 }
