@@ -3,20 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "open index.html",
+    "start": "http-server -c-1",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "npm run test -- --watchAll"
   },
   "author": "Yahya Gilany <gilanyym@ucmail.uc.edu>",
   "license": "UNLICENSED",
   "dependencies": {
     "@types/jest": "^25.2.3",
     "directory-tree": "^2.2.4",
+    "http-server": "^14.1.1",
     "jest": "^26.0.1",
     "lodash": "^4.17.15",
     "regenerator-runtime": "^0.13.5",
-    "rewire": "^5.0.0",
-    "simple-git": "^3.7.1"
+    "rewire": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
