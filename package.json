@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "http-server -c-1",
-    "test": "jest ./jest-tests",
+    "test": "jest",
     "test:watch": "npm run test -- --watchAll"
   },
   "author": "Yahya Gilany <gilanyym@ucmail.uc.edu>",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/jest": "^25.2.3",
     "directory-tree": "^2.2.4",
+    "http-server": "^14.1.1",
     "http-server": "^14.1.1",
     "jest": "^26.0.1",
     "lodash": "^4.17.15",
