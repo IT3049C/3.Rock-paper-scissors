@@ -5,6 +5,10 @@
   "scripts": {
     "start": "http-server -c-1",
     "test": "jest",
+    "test:layout": "jest --testMatch='**/*layout.test.js'",
+    "test:styling": "jest --testMatch='**/*styling.test.js'",
+    "test:logic": "jest --testMatch='**/*rps-logic.test.js'",
+    "test:controller": "jest --testMatch='**/*controller.test.js'",
     "test:watch": "npm run test -- --watchAll"
   },
   "author": "Yahya Gilany <gilanyym@ucmail.uc.edu>",
