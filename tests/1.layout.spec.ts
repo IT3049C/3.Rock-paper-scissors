@@ -24,7 +24,7 @@ test.describe("Layout Checks", () => {
 
     await expect(formLocator.getByLabel(/your name/i)).toBeTruthy();
     await expect(formLocator.locator(`label`)).toContainText(/your name/i);
-    await expect(formLocator.getByLabel(/your name/i)).toHaveAttribute(`placeholder`, /enter your name here/i);
+    await expect(formLocator.getByLabel(/your name/i)).toHaveAttribute(`placeholder`, /enter name here/i);
 
     await expect(formLocator.getByRole(`button`)).toBeTruthy();
     await expect(formLocator.getByRole(`button`)).toContainText(/start game/i);

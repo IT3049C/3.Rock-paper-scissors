@@ -1,6 +1,6 @@
 /**
  * @jest-environment jsdom
-*/
+ */
 /* eslint-env browser */
 
 const fs = require(`fs`);
@@ -30,7 +30,7 @@ describe(`html content`, function () {
     expect(h1Title).toHaveTextContent(/rock paper scissors/i);
   });
 
-  test(`container div contains a h1, and 2 divs with ids welcome-screen and game-screen`, function() {
+  test(`container div contains a h1, and 2 divs with ids welcome-screen and game-screen`, function () {
     const h1tag = document.querySelector(`.container > h1`);
     const welcomeScreen = document.querySelector(`.container > #welcome-screen`);
     const gameScreen = document.querySelector(`.container > #game-screen`);
@@ -40,7 +40,7 @@ describe(`html content`, function () {
     expect(gameScreen).toBeTruthy();
   });
 
-  test(`#welcome-screen contains a form with specific fields`, function() {
+  test(`#welcome-screen contains a form with specific fields`, function () {
     const form = document.querySelector(`#welcome-screen > form`);
     const formInnerDiv = form.querySelector(`div`);
     const formLabel = formInnerDiv.querySelector(`label`);
@@ -54,36 +54,35 @@ describe(`html content`, function () {
     expect(formButton).toBeTruthy();
   });
 
-  test(`#welcome-screen form id is (name-form)`, function() {
+  test(`#welcome-screen form id is (name-form)`, function () {
     const form = document.querySelector(`#welcome-screen > form`);
 
     expect(form).toHaveAttribute(`id`, `name-form`);
   });
 
-  test(`#welcome-screen form label's text is (Your Name) and has for attribute of (username)`, function() {
+  test(`#welcome-screen form label's text is (Your Name) and has for attribute of (username)`, function () {
     const formLabel = document.querySelector(`#welcome-screen > form > div > label`);
 
     expect(formLabel).toHaveAttribute(`for`, `username`);
     expect(formLabel).toHaveTextContent(/your name/i);
   });
 
-  test(`#welcome-screen form input's placeholder is (Enter your name ...), id and name attributes are (username)`, function() {
+  test(`#welcome-screen form input's placeholder is (Enter your name ...), id and name attributes are (username)`, function () {
     const formInput = document.querySelector(`#welcome-screen > form > div > input`);
 
     expect(formInput).toHaveAttribute(`id`, `username`);
     expect(formInput).toHaveAttribute(`name`, `username`);
-    expect(formInput).toHaveAttribute(`placeholder`, `Enter Name Here...`);
+    expect(formInput).toHaveAttribute(`placeholder`, /Enter name here.../i);
   });
 
-  test(`#welcome-screen form button's text is (Start Game!) and id is(start-game-button)`, function() {
+  test(`#welcome-screen form button's text is (Start Game!) and id is(start-game-button)`, function () {
     const formButton = document.querySelector(`#welcome-screen > form > button`);
 
     expect(formButton).toHaveTextContent(/start game(.)+/i);
     expect(formButton).toHaveAttribute(`id`, `start-game-button`);
   });
 
-
-  test(`#game-screen structure`, function() {
+  test(`#game-screen structure`, function () {
     const gameScreenScoreTallyDiv = document.querySelector(`#game-screen > div`);
     const gameScreenScoreTallyP = gameScreenScoreTallyDiv.querySelector(`p`);
     const form = document.querySelector(`#game-screen > form`);
@@ -112,45 +111,43 @@ describe(`html content`, function () {
     expect(gameScreenScoreTallyP).toHaveTextContent(/user: 0 v cpu: 0/i);
   });
 
-  test(`#game-screen form id is (game-form)`, function() {
+  test(`#game-screen form id is (game-form)`, function () {
     const form = document.querySelector(`#game-screen > form`);
 
     expect(form).toHaveAttribute(`id`, `game-form`);
   });
 
-  test(`#game-screen form label's text is (Your Name) and has for attribute of (username)`, function() {
+  test(`#game-screen form label's text is (Your Name) and has for attribute of (username)`, function () {
     const formLabel = document.querySelector(`#game-screen > form > div > label`);
 
     expect(formLabel).toHaveTextContent(/Select your choice/i);
     expect(formLabel).toHaveAttribute(`for`, `user-selection`);
   });
 
-  test(`#game-screen form select's id and name attributes are (user-selection) and has 3 options`, function() {
+  test(`#game-screen form select's id and name attributes are (user-selection) and has 3 options`, function () {
     const formSelect = document.querySelector(`#game-screen > form > div > select`);
     const formSelectOptions = formSelect.querySelectorAll(`option`);
-    const formOptions = Array.from(formSelectOptions).map(option => option.textContent);
+    const formOptions = Array.from(formSelectOptions).map((option) => option.textContent);
     const expectedOptions = [ `Rock`, `Paper`, `Scissors` ];
 
     expect(formSelect).toHaveAttribute(`id`, `user-selection`);
     expect(formSelect).toHaveAttribute(`name`, `user-selection`);
     expect(formSelectOptions).toHaveLength(3);
     expect(formOptions).toEqual(expect.arrayContaining(expectedOptions));
-
   });
 
-  test(`#game-screen form button's text is (Go!) and id is(go-button)`, function() {
+  test(`#game-screen form button's text is (Go!) and id is(go-button)`, function () {
     const formButton = document.querySelector(`#game-screen > form > button`);
 
     expect(formButton).toHaveTextContent(/go(.)+/i);
     expect(formButton).toHaveAttribute(`id`, `go-button`);
   });
 
-  test(`#game-screen game history patagraph's ID is (game-history)`, function() {
+  test(`#game-screen game history patagraph's ID is (game-history)`, function () {
     const gameHistoryParagraph = document.querySelector(`#game-screen > p`);
 
     expect(gameHistoryParagraph).toHaveAttribute(`id`, `game-history`);
   });
-
 
   // it(`body's first element is <div> element with the class of container`, function () {
   //   const bodyFirstElement = document.body.firstElementChild;
@@ -221,6 +218,4 @@ describe(`html content`, function () {
 
   //   expect(found).toBeTruthy();
   // });
-
-
 });
