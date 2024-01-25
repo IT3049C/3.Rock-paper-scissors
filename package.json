@@ -9,7 +9,7 @@
     "test:layout": "npm run test:e2e -- layout",
     "test:styling": "npm run test:e2e -- styling",
     "test:logic": "jest --testMatch='**/*rps-logic.test.js'",
-    "test:controller": "jest --testMatch='**/*controller.test.js'",
+    "test:controller": "npm run test:e2e -- controller",
     "test:watch": "npm run test -- --watchAll"
   },
   "author": "Yahya Gilany <gilanyym@ucmail.uc.edu>",

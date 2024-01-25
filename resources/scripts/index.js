@@ -16,12 +16,15 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-
+  scoreParagraph.innerHTML = `${game.username}: ${game.score.user} v CPU: ${game.score.cpu}`;
 }
 
 // updateGameHistoryUI
 function updateGameHistoryUI(){
-
+  gameHistoryParagraph.innerHTML = ``;
+  game.gameHistoryLog.forEach((log) => {
+    gameHistoryParagraph.innerHTML += `<li>${log}</li>`;
+  });
 }
 
 // start-game-button EventListener
@@ -33,11 +36,21 @@ startGameButton.addEventListener(`click`, function (e) {
   // Complete
   welcomeScreen.classList.add(`d-none`);
   gameScreen.classList.remove(`d-none`);
+  updateScoreTallyUI();
 });
 
 // go-button EventListener
-goButton.addEventListener(`click`, function () {
-  
+// add an Event Listener to the go-button on the click event.
+
+// get the userSelection from the select
+// call the play(userSelection) of the game object.
+// update the text of scoreParagraph using the updateScoreTallyUI() function
+// update the gameHistoryParagraph using the updateGameHistoryUI() function
+goButton.addEventListener(`click`, function (e) {
+  e.preventDefault();
+  game.play(userSelection.value);
+  updateScoreTallyUI();
+  updateGameHistoryUI();
 });
 
 // If you're doing the extra-credit, uncomment the below: reset-game-button
