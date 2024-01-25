@@ -1,7 +1,7 @@
 import path from "path";
 const { test, expect } = require("@playwright/test");
 
-test.describe("Layout Checks", () => {
+test.describe("Styling Checks", () => {
   test.beforeEach(async ({ page }) => {
     const filePath = path.join(__dirname, "../index.html");
     await page.goto(`file://${filePath}`);
@@ -20,7 +20,7 @@ test.describe("Layout Checks", () => {
     const gameFormLocator = await page.locator(`#game-screen form`);
 
     await expect(welcomeFormLocator.getByRole(`button`)).toHaveClass(`btn btn-primary`);
-    await expect(gameFormLocator.getByRole(`button`)).toHaveClass(`btn btn-success`);
+    await expect(gameFormLocator.getByRole(`button`, {includeHidden: true})).toHaveClass(`btn btn-success`);
   });
 
   test(`forms should have a form-group class`, async ({ page }) => {
