@@ -19,7 +19,7 @@ test.describe("Layout Checks", () => {
     await expect(welcomeDivLocator).toBeVisible();
   });
 
-  test(`Game Div Visible when starting the game`, async ({ page }) => {
+  test(`Game Div Not Visible when starting the game`, async ({ page }) => {
     const welcomeDivLocator = await page.locator(`#welcome-screen`);
     const gameDivLocator = await page.locator(`#game-screen`);
 
