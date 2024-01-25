@@ -5,10 +5,11 @@
   "scripts": {
     "start": "http-server -c-1",
     "test": "jest",
-    "test:layout": "jest --testMatch='**/*layout.test.js'",
-    "test:styling": "jest --testMatch='**/*styling.test.js'",
+    "test:e2e": "npx playwright test",
+    "test:layout": "npm run test:e2e -- layout",
+    "test:styling": "npm run test:e2e -- styling",
     "test:logic": "jest --testMatch='**/*rps-logic.test.js'",
-    "test:controller": "jest --testMatch='**/*controller.test.js'",
+    "test:controller": "npm run test:e2e -- controller",
     "test:watch": "npm run test -- --watchAll"
   },
   "author": "Yahya Gilany <gilanyym@ucmail.uc.edu>",
@@ -25,11 +26,14 @@
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.5",
+    "@playwright/test": "^1.41.1",
     "@testing-library/dom": "^7.31.0",
     "@testing-library/jest-dom": "^5.8.0",
+    "@types/node": "^20.11.5",
     "babel-jest": "^26.0.1",
     "babel-plugin-rewire": "^1.2.0",
     "eslint": "^7.0.0",
+    "expect-playwright": "^0.8.0",
     "prettier": "^2.3.0"
   }
 }

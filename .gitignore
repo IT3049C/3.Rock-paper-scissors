@@ -209,4 +209,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/node,code,linux,macos,windows,sublimetext
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

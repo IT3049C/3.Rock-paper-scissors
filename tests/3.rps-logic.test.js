@@ -1,6 +1,5 @@
 const rewire = require(`rewire`);
 const RockPaperScissors = rewire(`../resources/scripts/rock_paper_scissors`).__get__(`RockPaperScissors`);
-const mathRandomSpy = jest.spyOn(Math, `random`);
 
 describe(`RockPaperScissors class`, function () {
   describe(`determineWinner()`, function() {
@@ -27,7 +26,6 @@ describe(`RockPaperScissors class`, function () {
   });
   describe(`generateCPUResponse()`, function () {
     it(`works`, function() {
-      mathRandomSpy.mockImplementation(() => 0.5);
       const game = new RockPaperScissors();
       const retvals = Array(50).fill(0).map(i => game.generateCPUResponse());
       const expected = [ `rock`, `paper`,`scissors` ];
