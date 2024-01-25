@@ -5,8 +5,9 @@
   "scripts": {
     "start": "http-server -c-1",
     "test": "jest",
-    "test:layout": "jest --testMatch='**/*layout.test.js'",
-    "test:styling": "jest --testMatch='**/*styling.test.js'",
+    "test:e2e": "npx playwright test",
+    "test:layout": "npm run test:e2e -- layout",
+    "test:styling": "npm run test:e2e -- styling",
     "test:logic": "jest --testMatch='**/*rps-logic.test.js'",
     "test:controller": "jest --testMatch='**/*controller.test.js'",
     "test:watch": "npm run test -- --watchAll"
@@ -16,7 +17,6 @@
   "dependencies": {
     "@types/jest": "^25.2.3",
     "directory-tree": "^2.2.4",
-    "http-server": "^14.1.1",
     "http-server": "^14.1.1",
     "jest": "^26.0.1",
     "lodash": "^4.17.15",
