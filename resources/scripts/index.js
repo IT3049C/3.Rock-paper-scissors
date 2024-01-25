@@ -25,7 +25,8 @@ function updateGameHistoryUI(){
 }
 
 // start-game-button EventListener
-startGameButton.addEventListener(`click`, function () {
+startGameButton.addEventListener(`click`, function (e) {
+  e.preventDefault();
   const username = userNameInput.value;
   // eslint-disable-next-line no-undef
   game = new RockPaperScissors(username);
