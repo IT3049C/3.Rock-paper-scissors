@@ -14,6 +14,7 @@ expect.extend(matchers)
  */
 export default defineConfig({
   testDir: './tests',
+  testMatch: '**/*.@(spec).?(c|m)[jt]s?(x)',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
