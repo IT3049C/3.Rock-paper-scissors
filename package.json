@@ -10,7 +10,8 @@
     "test:styling": "npm run test:e2e -- styling",
     "test:logic": "jest --testMatch='**/*rps-logic.test.js'",
     "test:controller": "npm run test:e2e -- controller",
-    "test:watch": "npm run test -- --watchAll"
+    "test:watch": "npm run test -- --watchAll",
+    "postinstall": "npx playwright install --with-deps"
   },
   "author": "Yahya Gilany <gilanyym@ucmail.uc.edu>",
   "license": "UNLICENSED",
